@@ -19,16 +19,16 @@ with open('./input.txt', 'r') as file:
             if line[char].isdigit():
                 digits.append(int(line[char]))
             elif line[char].isalpha():
-                current_number = line[char:char+3]
-                if(current_number in digit_mapping):
+                current_number = line[char:char + 3]
+                if current_number in digit_mapping:
                     digits.append(digit_mapping[current_number])
                 else:
-                    current_number = line[char:char+4]
-                    if (current_number in digit_mapping):
+                    current_number = line[char:char + 4]
+                    if current_number in digit_mapping:
                         digits.append(digit_mapping[current_number])
                     else:
                         current_number = line[char:char + 5]
-                        if (current_number in digit_mapping):
+                        if current_number in digit_mapping:
                             digits.append(digit_mapping[current_number])
 
         if len(digits) >= 2:

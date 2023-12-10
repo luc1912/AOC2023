@@ -15,7 +15,6 @@ def find_number(line, char):
 
     number = lines[line][left+1:right]
 
-
     return int(number)
 
 
